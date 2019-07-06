@@ -1,6 +1,3 @@
-<?php
-include './views/layouts/header.php';
-?>
 <div class="panel-heading">
     Cập nhật tin tức
 </div>

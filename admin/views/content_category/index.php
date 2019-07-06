@@ -1,6 +1,3 @@
-<?php
-include './views/layouts/header.php';
-?>
 <div class="panel-heading">
     Loại tin tức
 </div>
