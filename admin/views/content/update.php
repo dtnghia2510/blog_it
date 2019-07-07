@@ -1,5 +1,5 @@
 <?php
-include './views/layouts/header.php';
+ob_start();
 ?>
 <div class="panel-heading">
     Cập nhật tin tức
@@ -10,15 +10,11 @@ include './views/layouts/header.php';
         <div class="form-group">
             <label>Thể loại bài viết:</label>
             <select name="id_loai_bai" class="form-control" required  oninvalid="this.setCustomValidity('Bạn phải chọn thể loại bài viết')" oninput="this.setCustomValidity('')">
-                <option value="<?php echo $result[1] ?>"><?php echo $result[12]; ?></option>
+                <option value="<?php echo $result[1] ?>"><?php echo $result[12] ?></option>
                 <option value="">Chọn thể loại bài viết</option>
-                <?php
-                foreach ($data as $content_category) {
-                    ?>
-                    <option value="<?php echo $content_category['content_category_id'] ?>">
-                        <?php echo $content_category['category_name'];?>
-                    </option>
-                <?php
+                <?php  foreach ($data as $content_category) { ?>
+                    <option value="<?php echo $content_category['content_category_id'] ?>"><?php echo $content_category['category_name'] ?></option>
+                    <?php
                 }
                 ?>
             </select>

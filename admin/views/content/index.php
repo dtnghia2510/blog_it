@@ -1,7 +1,3 @@
-<?php
-include './views/layouts/header.php';
-?>
-
 <div class="panel-heading">
     Bài viết
 </div>

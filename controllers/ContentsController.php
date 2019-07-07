@@ -29,4 +29,14 @@ class ContentsController{
     public function top_work_news(){
         return $this->content_model->select_top_work_news();
     }
+    public function select_all_news(){
+        $result = $this->content_model->select_all_content();
+        return $result;
+    }
+    //Chi tiet tin tuc
+    public function detail(){
+        $id = $_GET['chitiet_tintuc'];
+        $result = $this->content_model->select_One_Record($id);
+        return $result;
+    }
 }

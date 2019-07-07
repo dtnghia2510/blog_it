@@ -1,5 +1,5 @@
 <?php
-include './views/layouts/header.php';
+ob_start();
 ?>
 <div class="panel-heading">
     Thêm mới loại tin tức
