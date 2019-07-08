@@ -1,12 +1,17 @@
 <?php
 ob_start();
+include_once './views/layouts/header.php';
 ?>
-<div class="panel-heading">
-    Loại tin tức
+<div class="panel-heading" style="height: 70px;">
+    <h3 class="pull-left">Loại tin tức</h3>
+    <form action="index.php" method="get" class="pull-right form-group form-inline">
+        <input type="text" name="keyword" class="form-control" placeholder="Nhập từ khóa...">
+        <button name="btn_search" class="btn btn-primary" style="margin-left: 1px;">Tìm kiếm</button>
+    </form>
 </div>
 <div class="panel-body">
     <p>
-        <a href="?tao_loai_tin_tuc" class="btn btn-default">Thêm mới</a>
+        <a href="?tao_loai_tin_tuc" class="float-right btn btn-default">Thêm mới</a>
     </p>
     <div class="table-responsive">
         <table class="table">
@@ -40,3 +45,6 @@ ob_start();
         </table>
     </div>
 </div>
+<?php
+include_once './views/layouts/footer.php';
+?>

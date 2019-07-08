@@ -1,5 +1,5 @@
 <?php
-include_once './views/layouts/header.php';
+session_start();
 include 'controllers/BaseController.php';
-include_once './views/layouts/footer.php';
 ?>
+

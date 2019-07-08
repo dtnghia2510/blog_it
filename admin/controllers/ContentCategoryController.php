@@ -10,6 +10,12 @@ class ContentCategoryController{
     public function index(){
         return $this->content_category_model->select_content_category();
     }
+    //Search
+    public function list_search(){
+        $keyword = $_GET['keyword'];
+        $result = $this->content_category_model->search_select_content_category($keyword);
+        return $result;
+    }
     //Create data
     public function create(){
         if (isset($_POST['loai_tin_tuc'])){

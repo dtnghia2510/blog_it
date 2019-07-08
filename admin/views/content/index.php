@@ -1,3 +1,7 @@
+<?php
+ob_start();
+include_once './views/layouts/header.php';
+?>
 <div class="panel-heading">
     Bài viết
 </div>
@@ -41,3 +45,6 @@
         </table>
     </div>
 </div>
+<?php
+include_once './views/layouts/footer.php';
+?>

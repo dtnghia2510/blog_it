@@ -19,6 +19,15 @@ class ContentCategory extends connection{
         $result = $this->db_connect->selectQuery($sql);
         return $result;
     }
+    public function search_select_content_category($search){
+        $sql = "Select * 
+                from content_category
+                where isdeleted = 0
+                and category_name like '%$search%'
+                ORDER BY created_date DESC";
+        $result = $this->db_connect->selectQuery($sql);
+        return $result;
+    }
     //create content category
     public function insert_content_category($ten_loai_tin, $mo_ta, $ngay_tao, $nguoi_tao, $trang_thai){
         $sql = "INSERT INTO content_category(category_name, description, created_date, created_by, isdeleted) values ('$ten_loai_tin', '$mo_ta', '$ngay_tao', '$nguoi_tao', $trang_thai)";

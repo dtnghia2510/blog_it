@@ -1,5 +1,6 @@
 <?php
 ob_start();
+include_once './views/layouts/header.php';
 ?>
 <div class="panel-heading">
     Xác nhận xóa loại tin tức
@@ -21,3 +22,6 @@ ob_start();
         </div>
     </form>
 </div>
+<?php
+include_once './views/layouts/footer.php';
+?>

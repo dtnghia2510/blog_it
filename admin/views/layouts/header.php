@@ -33,8 +33,15 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://www.pingpong-labs.com" target="_blank">Xin chào: Admin</a></li>
-                <li><a href="http://www.pingpong-labs.com" target="_blank">Đăng xuất</a></li>
+                <?php
+//                include_once './controllers/BaseController.php';
+                if (isset($_SESSION['username'])){
+                    ?>
+                    <li><a href="">Xin chào: <?php echo $_SESSION['username'] ?></a></li>
+                    <li><a href="?dang_xuat" name="dang_xuat">Đăng xuất</a></li>
+                    <?php
+                }
+                ?>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
