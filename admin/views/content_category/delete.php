@@ -1,3 +1,6 @@
+<?php 
+    include_once './views/layouts/header.php';
+ ?>
 <div class="panel-heading">
     Xác nhận xóa loại tin tức
 </div>

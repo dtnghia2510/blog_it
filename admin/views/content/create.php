@@ -1,3 +1,6 @@
+<?php 
+    include './views/layouts/header.php';
+ ?>
 <div class="panel-heading">
     Thêm mới tin tức
 </div>

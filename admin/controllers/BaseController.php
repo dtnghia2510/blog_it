@@ -2,6 +2,7 @@
 //Book category
 require './controllers/ContentCategoryController.php';
 require './controllers/ContentController.php';
+
 //content category
 if (isset($_GET['danhsach_loaitintuc'])){
     $loaibaiviet = new ContentCategoryController();

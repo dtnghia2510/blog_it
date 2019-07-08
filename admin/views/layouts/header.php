@@ -33,8 +33,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://www.pingpong-labs.com" target="_blank">Xin chào: Admin</a></li>
-                <li><a href="http://www.pingpong-labs.com" target="_blank">Đăng xuất</a></li>
+                <li><a id="welcome" href="#" target="_blank">Xin chào: <?php echo $login_session; ?></a></li>
+                <li><a href="" target="_blank">Đăng xuất</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

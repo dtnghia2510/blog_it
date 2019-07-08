@@ -1,3 +1,6 @@
+<?php 
+    include_once './views/layouts/header.php';
+ ?>
 <div class="panel-heading">
     Cập nhật tin tức
 </div>
@@ -12,7 +15,7 @@
                 <?php
                 foreach ($data as $content_category) {
                     ?>
-                    <option value="<?php echo $content_category['content_category_id'] ?>">
+                    <option value="<?php echo $content_category['content_category_id']; ?>">
                         <?php echo $content_category['category_name'];?>
                     </option>
                 <?php
