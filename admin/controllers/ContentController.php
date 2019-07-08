@@ -49,7 +49,6 @@ class ContentController{
         //Xu ly upload anh
         if (isset($_FILES['url_anh'])) {
             if ($_FILES['url_anh']['error'] > 0){
-//                echo "Không có ảnh nào được chọn";
                 $hinh_anh = $_POST['old_image_url'];
             }else {
                 move_uploaded_file($_FILES['url_anh']['tmp_name'], 'assets/images/' . $_FILES['url_anh']['name']);

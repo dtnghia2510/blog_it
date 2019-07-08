@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 <?php 
     include_once './views/layouts/header.php';
  ?>
+=======
+<?php
+ob_start();
+?>
+>>>>>>> deb05dc1b47d62fd43eaa5ba106cfeb292b31517
 <div class="panel-heading">
     Cập nhật tin tức
 </div>
@@ -10,8 +16,9 @@
         <div class="form-group">
             <label>Thể loại bài viết:</label>
             <select name="id_loai_bai" class="form-control" required  oninvalid="this.setCustomValidity('Bạn phải chọn thể loại bài viết')" oninput="this.setCustomValidity('')">
-                <option value="<?php echo $result[1] ?>"><?php echo $result[12]; ?></option>
+                <option value="<?php echo $result[1] ?>"><?php echo $result[12] ?></option>
                 <option value="">Chọn thể loại bài viết</option>
+<<<<<<< HEAD
                 <?php
                 foreach ($data as $content_category) {
                     ?>
@@ -19,6 +26,11 @@
                         <?php echo $content_category['category_name'];?>
                     </option>
                 <?php
+=======
+                <?php  foreach ($data as $content_category) { ?>
+                    <option value="<?php echo $content_category['content_category_id'] ?>"><?php echo $content_category['category_name'] ?></option>
+                    <?php
+>>>>>>> deb05dc1b47d62fd43eaa5ba106cfeb292b31517
                 }
                 ?>
             </select>

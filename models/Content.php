@@ -10,6 +10,15 @@ class Content extends connection{
             return false;
         }
     }
+    public function select_content(){
+        $sql = "Select *
+                From content, content_category
+                where content.isdeleted = 0
+                and content.content_category_id = content_category.content_category_id
+                ORDER BY content.content_id DESC";
+        $result = $this->db_connect->selectQuery($sql);
+        return $result;
+    }
     //View data
     public function select_new_content(){
         $sql = "Select *
@@ -27,7 +36,7 @@ class Content extends connection{
                 where content.isdeleted = 0
                 and content.content_category_id = content_category.content_category_id
                 ORDER BY content.content_id DESC
-                Limit 6";
+                Limit 10";
         $result = $this->db_connect->selectQuery($sql);
         return $result;
     }
@@ -101,6 +110,16 @@ class Content extends connection{
         $result = $this->db_connect->selectQuery($sql);
         return $result;
     }
+    //Select all content for page
+    public function select_all_content(){
+        $sql = "Select *
+                From content, content_category
+                where content.isdeleted = 0
+                and content.content_category_id = content_category.content_category_id
+                ORDER BY content.content_id DESC";
+        $result = $this->db_connect->selectQuery($sql);
+        return $result;
+    }
     //Get 1 record base sql_select
     public function select_One_Record($content_id){
         $sql = "SELECT *
@@ -110,5 +129,4 @@ class Content extends connection{
         $result  = $this->db_connect->selectOneRecord($sql);
         return $result;
     }
-
 }

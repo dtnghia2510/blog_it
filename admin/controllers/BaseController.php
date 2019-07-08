@@ -49,9 +49,9 @@ if (isset($_GET['tao_tin_tuc'])){
     include('./views/content/create.php');
 }
 if (isset($_GET['edit_tintuc'])){
-    $loai_bai_viet = new ContentCategoryController();
-    $data = $loai_bai_viet->index();
+    $loaibaiviet = new ContentCategoryController();
     $bai_viet = new ContentController();
+    $data = $loaibaiviet->index();
     $result = $bai_viet->detail();
     include "./views/content/update.php";
 }

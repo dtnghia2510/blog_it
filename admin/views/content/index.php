@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 <?php 
     include './views/layouts/header.php';
  ?>
+=======
+>>>>>>> deb05dc1b47d62fd43eaa5ba106cfeb292b31517
 <div class="panel-heading">
     Bài viết
 </div>

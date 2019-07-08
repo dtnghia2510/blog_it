@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 <?php 
     include_once './views/layouts/header.php';
  ?>
+=======
+<?php
+ob_start();
+?>
+>>>>>>> deb05dc1b47d62fd43eaa5ba106cfeb292b31517
 <div class="panel-heading">
     Xác nhận xóa loại tin tức
 </div>
