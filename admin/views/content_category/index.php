@@ -2,8 +2,9 @@
 ob_start();
 include_once './views/layouts/header.php';
 ?>
-<div class="panel-heading" style="height: 70px;">
-    <h3 class="pull-left">Loại tin tức</h3>
+<div class="panel-heading" style="height: 60px;">
+    <h3 class="pull-left" style="line-height: 0px;">Loại tin tức</h3>
+
     <form action="index.php" method="get" class="pull-right form-group form-inline">
         <input type="text" name="keyword" class="form-control" placeholder="Nhập từ khóa...">
         <button name="btn_search" class="btn btn-primary" style="margin-left: 1px;">Tìm kiếm</button>
